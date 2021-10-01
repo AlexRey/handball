@@ -1,0 +1,35 @@
+<div class="container is-max-desktop p-6">
+
+  <p id="notice" class="mb-4"><%= notice %></p>
+
+  <div class="box has-background-white-ter">
+    <p>
+      <strong>Local:</strong>
+      <%= @match.local %>
+    </p>
+
+    <p>
+      <strong>Visitor:</strong>
+      <%= @match.visitor %>
+    </p>
+
+    <p>
+      <strong>Result:</strong>
+      <%= @match.result %>
+    </p>
+
+    <p>
+      <strong>Start:</strong>
+      <%= @match.start %>
+    </p>
+
+    <p>
+      <strong>End:</strong>
+      <%= @match.end %>
+    </p>
+
+ </div>
+
+  <%= link_to 'Back to index', matches_path, class: 'button is-dark m-1' %>
+  
+</div>

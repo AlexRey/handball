@@ -1,0 +1,10 @@
+<div class="container is-max-desktop p-6">
+
+  <div class="box has-background-white-ter">
+    <h1 class="title">New Match</h1>
+    <%= render 'form', match: @match %>
+  </div>
+
+  <%= link_to 'Back to index', matches_path, class: 'button is-dark m-1' %>
+  
+</div>

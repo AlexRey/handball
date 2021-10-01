@@ -1,0 +1,42 @@
+<%= form_with(model: match) do |form| %>
+  <% if match.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(match.errors.count, "error") %> prohibited this match from being saved:</h2>
+
+      <ul>
+        <% match.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :local, class: 'label' %>
+    <%= form.text_field :local, class: 'input', placeholder: "Siero Deportivo Balonmano" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :visitor, class: 'label' %>
+    <%= form.text_field :visitor, class: 'input', placeholder: "Balonmano Vetusta" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :result, class: 'label' %>
+    <%= form.text_field :result, class: 'input', placeholder: "32-25" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :start, class: 'label' %>
+    <%= form.datetime_select :start %>
+  </div>
+
+  <div class="field">
+    <%= form.label :end, class: 'label' %>
+    <%= form.datetime_select :end %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit nil, class: 'button is-success mt-4' %>
+  </div>
+<% end %>

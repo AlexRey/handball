@@ -1,0 +1,11 @@
+<div class="container is-max-desktop p-6">
+
+  <h1 class="title">
+    Scoreboard
+    <img src="<%= asset_path 'handball.png' %>" width="48">
+  </h1>
+
+  <%= render_async_cache scoreboard_live_path, start: true, interval: 60000 %>
+
+</div>
+

@@ -1,0 +1,54 @@
+<% cache render_async_cache_key(request.path), skip_digest: true do %>
+
+  <div class="columns is-multiline">
+
+    <%@matches.each do |match|%> 
+      <%if match %> 
+
+        <div class="column is-half">
+          <div class="card">
+
+            <header class="card-header">
+              <div class="card-header-title is-size-2 has-text-weight-bold has-background-warning">
+                <%= match.result %>
+              </div>
+            </header>
+
+            <table class="table is-striped">
+              <thead>
+                <tr class="has-background-grey-lighter">
+                  <th>Local</th>
+                  <th></th>
+                  <th>Visitor</th>
+                </tr>
+              </thead>
+            
+              <tbody>
+                  <tr>
+                    <td><%= match.local %></td>
+                    <th></th>
+                    <td><%= match.visitor %></td>
+                  </tr>
+                  <tr class="has-background-grey-lighter">
+                    <th>Start</th>
+                    <th></th>
+                    <th>End</th>
+                  </tr>
+                  <tr>
+                    <td><%= match.start %></td>
+                    <th></th>
+                    <td><%= match.end %></td>
+                  </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+      <% end %>
+    <% end %>
+
+  </div>
+
+<% end %>
+
+

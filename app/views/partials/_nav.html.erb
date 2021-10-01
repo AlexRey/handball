@@ -1,0 +1,13 @@
+<nav class="navbar is-light has-shadow" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <div class="navbar-item">
+      <img src="<%= asset_path 'field.png' %>" width="32">
+    </div>
+  </div>
+  <div class="navbar-menu">
+    <div class="navbar-start">
+        <%= link_to "Scoreboard", scoreboard_index_path, class:"navbar-item" %>
+        <%= link_to "CRUD", matches_path, class:"navbar-item" %>
+    </div>
+  </div>
+</nav>
